@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Parts24</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        /* Fade-in Animation */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">Parts24</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5 fade-in">
+        <h2>Our Products</h2>
+        
+        <section id="popular-products">
+            <h3>Popular Products</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card product-card">
+                        <img src="cat.png" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">High-Performance Brake Pads</h5>
+                            <p class="card-text">Ensure your safety with our top-quality brake pads designed for high performance.</p>
+                            <p>Price: $50</p>
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#enquireModal">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card">
+                        <img src="cat.png" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Engine Oil 5W-30</h5>
+                            <p class="card-text">Enhance your engine performance with our premium synthetic engine oil.</p>
+                            <p>Price: $30</p>
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#enquireModal">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card">
+                        <img src="cat.png" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Car Battery 12V</h5>
+                            <p class="card-text">Reliable power for your vehicle with our long-lasting car batteries.</p>
+                            <p>Price: $80</p>
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#enquireModal">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card">
+                        <img src="cat.png" class="card-img-top" alt="Product 4">
+                        <div class="card-body">
+                            <h5 class="card-title">LED Headlights</h5>
+                            <p class="card-text">Brighten your way with energy-efficient LED headlights.</p>
+                            <p>Price: $40</p>
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#enquireModal">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content text-center">
+            <p>&copy; 2024 Parts24. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Product Inquiry Modal -->
+    <div class="modal fade" id="enquireModal" tabindex="-1" role="dialog" aria-labelledby="enquireModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="enquireModalLabel">Product Inquiry</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://formspree.io/f/{your-form-id}" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comments">Comments</label>
+                            <textarea class="form-control" id="comments" name="comments" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
